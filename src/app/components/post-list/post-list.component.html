@@ -1,0 +1,8 @@
+<h2>Posts:</h2>
+
+@for(i of allPosts; track i.id) {
+    <app-post [displayPost]="i" (deleteEvent)="deletePost($event)"></app-post>
+}
+<br/>
+<br/>
+<app-post-form (createEvent)="addPost($event)"></app-post-form>
